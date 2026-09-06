@@ -1,0 +1,16 @@
+name: tensionmap-minimal-repro
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python==3.9.12
+  - matplotlib==3.5.1
+  - numpy==1.23.5
+  - scipy==1.11.2
+  - scikit-learn==1.3.1
+  - pandas==1.4.1
+  - scikit-image==0.19.2
+  - nlopt==2.7.1
+  - ca-certificates
+  - certifi
+  - openssl
