@@ -30,10 +30,13 @@ This file is the cumulative experimental record for the TensionMap reproduction.
   network timeout/HTTP2 framing errors, so a minimal commit-pinned vendored
   snapshot was used. The initial three-channel Conda solve stalled under Conda
   4.12.0; retrying with only `conda-forge` completed successfully.
-- **GitHub push:** the local commit was created successfully, but HTTPS push
-  failed because no GitHub credential was available to Git on this machine.
-  GitHub CLI was not installed and no SSH private key was present. No token was
-  requested, stored in the repository, or placed in a remote URL.
+- **GitHub authentication and push (2026-09-07):** installed the checksum-
+  verified official GitHub CLI 2.100.0 binary and authenticated account
+  `anqitt` with `gh auth login --web`; credentials are held by the system
+  keyring and the remote URL contains no credentials. After the earlier
+  unauthenticated HTTPS attempt failed, `git push origin main` completed as a
+  normal non-force push. The remote commit and expected top-level files were
+  verified with `git ls-remote` and the GitHub API.
 - **Deviations from authors' minimal environment:** omitted `mamba` and
   `cyipopt` as requested; used only `conda-forge` instead of the three listed
   channels. All requested core package versions remain identical to the
