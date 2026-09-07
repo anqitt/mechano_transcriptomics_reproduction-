@@ -21,6 +21,9 @@ are included at this stage:
 - `tensionmap-minimal.yml`
 - `README.md`
 - `example_data/synthetic/test.tiff`
+- `notebooks/tensionmap_example.ipynb` (added unchanged from the pinned commit
+  for source verification and comparison with its saved synthetic outputs only;
+  it is not executed as part of the vendored snapshot)
 
 The files were downloaded from commit-specific `raw.githubusercontent.com` URLs.
 The full paper dataset and full transcriptomics environment are deliberately not
@@ -31,4 +34,5 @@ included.
 The preferred approach was a Git submodule, but repeated GitHub clone attempts
 failed because of network timeouts/HTTP2 framing errors while retrieving the
 large upstream repository. Pinning commit-specific raw files retains provenance
-and reproducibility without downloading the large notebook outputs.
+and reproducibility while including only the one upstream notebook needed for
+the official synthetic-example reference.
