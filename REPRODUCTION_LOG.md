@@ -68,3 +68,8 @@ This file is the cumulative experimental record for the TensionMap reproduction.
   the official notebook outputs; stress ellipses are also consistent, with
   fitted boundaries overlaid as requested by the current tutorial's
   `plot(['stress', 'cap'])` call.
+- **Input-mask inspection:** saved the unchanged 935×1098 label geometry as
+  `outputs/stage3_synthetic/input_test_mask.png` using a discrete categorical
+  palette. The visualization contains all 123 foreground labels; the source
+  TIFF retained SHA-256
+  `4586890d7aaa297e14c5f9d75639fb30a0bb6609fccc1e0bdcd4d2e493fc2968`.
