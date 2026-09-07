@@ -93,3 +93,28 @@ This file is the cumulative experimental record for the TensionMap reproduction.
 - Per-label decisions are recorded in
   `outputs/stage3_synthetic/cell_inclusion_audit.csv`; labels are mapped back
   to the original TIFF by pixel overlap after TensionMap relabeling.
+
+## Step 4A — Real embryo data audit for Figure 3c
+
+- **Date:** 2026-09-07 (Asia/Shanghai); data audit only, with no biological
+  dataset downloaded.
+- **Target:** Figure 3c compares heterotypic boundary-junction tension with
+  homotypic within-tissue tension in three E8.5 mouse-embryo brain datasets:
+  NC–FMH (embryo 1), CM–FMH (embryo 2), and MHB (embryo 2).
+- **Minimum processed-data route:** six files—`adj_mat.csv` and
+  `tensionmap_res.csv` for each of datasets 1–3. The pinned analysis notebook
+  obtains junction tensions from the former and boundary annotations from the
+  latter, so VMSI need not be rerun for this route.
+- **Full-mechanics route:** the three `segmentation_final.tif` masks are the
+  VMSI inputs in the pinned upstream run notebook. This is optional for Figure
+  3c and was not attempted.
+- **Data source/size:** DOI `10.5281/zenodo.13975707` and the public Dropbox
+  mirror listed in upstream `data_access.txt`; the complete Zenodo ZIP is
+  278.2 MB. Individual file sizes are not published in the notebook/repository.
+- **Not required for processed Figure 3c:** `gex_res.csv`, segmentation TIFFs,
+  raw membrane/DAPI images, and other paper datasets.
+- **Source note:** the paper shows violin plots, whereas the pinned public
+  analysis notebook's corresponding plotting cell uses group means with SEM
+  bars; its junction classification and source values remain traceable.
+- **Manifest:** `REAL_DATA_MANIFEST.md` records the required and optional
+  files, provenance, and route distinction.
