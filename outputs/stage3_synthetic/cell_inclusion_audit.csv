@@ -1,0 +1,124 @@
+original_label,status,exclusion_reason
+1,excluded,touches_image_boundary; merged_into_external_cell
+2,excluded,touches_image_boundary; merged_into_external_cell
+3,excluded,touches_image_boundary; merged_into_external_cell
+4,excluded,touches_image_boundary; merged_into_external_cell
+5,excluded,touches_image_boundary; merged_into_external_cell
+6,excluded,touches_image_boundary; merged_into_external_cell
+7,excluded,touches_image_boundary; merged_into_external_cell
+8,excluded,touches_image_boundary; merged_into_external_cell
+9,excluded,touches_image_boundary; merged_into_external_cell
+10,excluded,touches_image_boundary; merged_into_external_cell
+11,retained,external_constraint_cell_adjacent_to_bulk_vertex
+12,retained,external_constraint_cell_adjacent_to_bulk_vertex
+13,retained,external_constraint_cell_adjacent_to_bulk_vertex
+14,retained,external_constraint_cell_adjacent_to_bulk_vertex
+15,excluded,touches_image_boundary; merged_into_external_cell
+16,retained,external_constraint_cell_adjacent_to_bulk_vertex
+17,retained,external_constraint_cell_adjacent_to_bulk_vertex
+18,retained,external_constraint_cell_adjacent_to_bulk_vertex
+19,retained,external_constraint_cell_adjacent_to_bulk_vertex
+20,excluded,touches_image_boundary; merged_into_external_cell
+21,retained,external_constraint_cell_adjacent_to_bulk_vertex
+22,excluded,touches_image_boundary; merged_into_external_cell
+23,retained,bulk_cell
+24,retained,bulk_cell
+25,retained,bulk_cell
+26,retained,bulk_cell
+27,retained,external_constraint_cell_adjacent_to_bulk_vertex
+28,retained,bulk_cell
+29,retained,bulk_cell
+30,retained,external_constraint_cell_adjacent_to_bulk_vertex
+31,retained,bulk_cell
+32,retained,bulk_cell
+33,excluded,touches_image_boundary; merged_into_external_cell
+34,retained,bulk_cell
+35,excluded,touches_image_boundary; merged_into_external_cell
+36,retained,bulk_cell
+37,retained,bulk_cell
+38,retained,external_constraint_cell_adjacent_to_bulk_vertex
+39,retained,bulk_cell
+40,retained,bulk_cell
+41,retained,external_constraint_cell_adjacent_to_bulk_vertex
+42,retained,bulk_cell
+43,retained,bulk_cell
+44,retained,bulk_cell
+45,retained,bulk_cell
+46,excluded,touches_image_boundary; merged_into_external_cell
+47,retained,bulk_cell
+48,excluded,touches_image_boundary; merged_into_external_cell
+49,retained,bulk_cell
+50,retained,external_constraint_cell_adjacent_to_bulk_vertex
+51,retained,external_constraint_cell_adjacent_to_bulk_vertex
+52,retained,bulk_cell
+53,retained,bulk_cell
+54,excluded,touches_image_boundary; merged_into_external_cell
+55,excluded,touches_image_boundary; merged_into_external_cell
+56,retained,bulk_cell
+57,retained,bulk_cell
+58,retained,bulk_cell
+59,retained,bulk_cell
+60,retained,external_constraint_cell_adjacent_to_bulk_vertex
+61,retained,bulk_cell
+62,retained,bulk_cell
+63,retained,bulk_cell
+64,retained,external_constraint_cell_adjacent_to_bulk_vertex
+65,retained,bulk_cell
+66,excluded,touches_image_boundary; merged_into_external_cell
+67,retained,bulk_cell
+68,retained,bulk_cell
+69,excluded,touches_image_boundary; merged_into_external_cell
+70,retained,bulk_cell
+71,retained,external_constraint_cell_adjacent_to_bulk_vertex
+72,retained,bulk_cell
+73,retained,bulk_cell
+74,retained,bulk_cell
+75,retained,external_constraint_cell_adjacent_to_bulk_vertex
+76,retained,bulk_cell
+77,excluded,touches_image_boundary; merged_into_external_cell
+78,excluded,touches_image_boundary; merged_into_external_cell
+79,retained,bulk_cell
+80,retained,bulk_cell
+81,retained,bulk_cell
+82,retained,external_constraint_cell_adjacent_to_bulk_vertex
+83,retained,bulk_cell
+84,retained,bulk_cell
+85,retained,external_constraint_cell_adjacent_to_bulk_vertex
+86,retained,bulk_cell
+87,excluded,touches_image_boundary; merged_into_external_cell
+88,retained,bulk_cell
+89,retained,bulk_cell
+90,retained,bulk_cell
+91,excluded,touches_image_boundary; merged_into_external_cell
+92,retained,bulk_cell
+93,retained,external_constraint_cell_adjacent_to_bulk_vertex
+94,retained,bulk_cell
+95,retained,external_constraint_cell_adjacent_to_bulk_vertex
+96,retained,bulk_cell
+97,retained,bulk_cell
+98,excluded,touches_image_boundary; merged_into_external_cell
+99,retained,bulk_cell
+100,retained,bulk_cell
+101,retained,bulk_cell
+102,retained,external_constraint_cell_adjacent_to_bulk_vertex
+103,excluded,touches_image_boundary; merged_into_external_cell
+104,retained,external_constraint_cell_adjacent_to_bulk_vertex
+105,retained,external_constraint_cell_adjacent_to_bulk_vertex
+106,retained,external_constraint_cell_adjacent_to_bulk_vertex
+107,retained,external_constraint_cell_adjacent_to_bulk_vertex
+108,excluded,external_neighbor_not_incident_to_any_bulk_vertex
+109,retained,external_constraint_cell_adjacent_to_bulk_vertex
+110,excluded,external_neighbor_not_incident_to_any_bulk_vertex
+111,retained,external_constraint_cell_adjacent_to_bulk_vertex
+112,excluded,touches_image_boundary; merged_into_external_cell
+113,excluded,touches_image_boundary; merged_into_external_cell
+114,retained,external_constraint_cell_adjacent_to_bulk_vertex
+115,excluded,touches_image_boundary; merged_into_external_cell
+116,excluded,touches_image_boundary; merged_into_external_cell
+117,excluded,touches_image_boundary; merged_into_external_cell
+118,excluded,touches_image_boundary; merged_into_external_cell
+119,excluded,touches_image_boundary; merged_into_external_cell
+120,excluded,touches_image_boundary; merged_into_external_cell
+121,excluded,touches_image_boundary; merged_into_external_cell
+122,excluded,touches_image_boundary; merged_into_external_cell
+123,excluded,touches_image_boundary; merged_into_external_cell

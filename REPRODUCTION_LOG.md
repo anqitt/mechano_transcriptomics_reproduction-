@@ -73,3 +73,23 @@ This file is the cumulative experimental record for the TensionMap reproduction.
   palette. The visualization contains all 123 foreground labels; the source
   TIFF retained SHA-256
   `4586890d7aaa297e14c5f9d75639fb30a0bb6609fccc1e0bdcd4d2e493fc2968`.
+
+## Step 3b — Why 123 labels become 83 analyzed cells
+
+- `segment.py` merges 38 original labels that touch the image boundary into
+  one external region, leaving 85 individually represented cells.
+- `VMSI.classify_cells()` identifies 52 bulk cells and 33 cells adjacent to
+  the external region. It retains 31 of the latter as external constraint
+  cells because they share a vertex with a bulk cell. Original labels 108 and
+  110 do not touch any bulk-cell vertex and are excluded. Thus, 52 + 31 = 83
+  cells participate in inference, while 38 + 2 = 40 original labels do not.
+- No original label is disconnected, no internal cell is flagged as a hole or
+  invalid topology, and there are no vertices with degree greater than three.
+  The 33 vertices marked `fourfold` reflect the code's broad `degree != 3`
+  flag; `remove_fourfold()` only acts on internal degree >3 vertices, so it
+  removes no cells here. Concave vertices are repositioned, not excluded.
+- The official pinned notebook's saved result table also has 83 rows, matching
+  this preprocessing audit and the Step 3 run.
+- Per-label decisions are recorded in
+  `outputs/stage3_synthetic/cell_inclusion_audit.csv`; labels are mapped back
+  to the original TIFF by pixel overlap after TensionMap relabeling.
