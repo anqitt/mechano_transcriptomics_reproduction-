@@ -42,3 +42,29 @@ This file is the cumulative experimental record for the TensionMap reproduction.
   channels. All requested core package versions remain identical to the
   authors' file. MATLAB and the full transcriptomics/R environment were not
   installed.
+
+## Step 3 — Official synthetic TensionMap tutorial
+
+- **Date:** 2026-09-07 (Asia/Shanghai)
+- **Input:** `TensionMap/example_data/synthetic/test.tiff`; shape
+  935×1098, `uint8`, with 123 foreground labels plus background 0.
+- **Environment/command:** `tensionmap-minimal-repro`;
+  `conda run -n tensionmap-minimal-repro python run_stage3_synthetic.py`.
+  The script follows the notebook's `run_VMSI(img)` call with the default
+  NLopt optimizer and does not change scientific parameters.
+- **Runtime/result:** 29.85 s; `run_VMSI` completed without an exception and
+  analyzed 83 cells. The upstream API discards NLopt termination codes, so a
+  specific convergence tolerance cannot be independently confirmed.
+- **Output dimensions:** cell results 83×20; adjacency/tension matrix 83×83;
+  219 edge-tension entries.
+- **Validity checks:** tension, pressure, stress summary fields, and adjacency
+  matrix contain no NaN or infinity values. No obviously invalid values or
+  runtime warnings were observed.
+- **Generated files:** `outputs/stage3_synthetic/{tension.png,pressure.png,
+  stress.png,cell_results.csv,adjacency_tension.csv,edge_tensions.csv,
+  run_summary.json}`. Temporary optimizer trace files were not retained.
+- **Errors/compatibility fixes:** none.
+- **Qualitative comparison:** tension and pressure patterns and ranges match
+  the official notebook outputs; stress ellipses are also consistent, with
+  fitted boundaries overlaid as requested by the current tutorial's
+  `plot(['stress', 'cap'])` call.

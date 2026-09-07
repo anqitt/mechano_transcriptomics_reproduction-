@@ -1,0 +1,64 @@
+{
+  "input_file": "TensionMap/example_data/synthetic/test.tiff",
+  "image_shape": [
+    935,
+    1098
+  ],
+  "image_dtype": "uint8",
+  "unique_values": 124,
+  "foreground_labels": 123,
+  "runtime_seconds": 29.850499545999995,
+  "optimizer": "nlopt",
+  "optimization_status": "completed_without_exception; upstream run_VMSI does not expose NLopt termination codes",
+  "analyzed_cells": 83,
+  "result_dataframe_shape": [
+    83,
+    20
+  ],
+  "adjacency_matrix_shape": [
+    83,
+    83
+  ],
+  "tension": {
+    "shape": [
+      219
+    ],
+    "nan_count": 0,
+    "infinity_count": 0,
+    "finite_count": 219,
+    "minimum": 0.0,
+    "maximum": 150.12597169655754
+  },
+  "pressure": {
+    "shape": [
+      83
+    ],
+    "nan_count": 0,
+    "infinity_count": 0,
+    "finite_count": 83,
+    "minimum": 0.561042,
+    "maximum": 1.574298
+  },
+  "stress": {
+    "shape": [
+      83,
+      4
+    ],
+    "nan_count": 0,
+    "infinity_count": 0,
+    "finite_count": 332,
+    "minimum": 7.878061083738352e-05,
+    "maximum": 1.5513243506524605
+  },
+  "adjacency_tension": {
+    "shape": [
+      83,
+      83
+    ],
+    "nan_count": 0,
+    "infinity_count": 0,
+    "finite_count": 6889,
+    "minimum": 0.0,
+    "maximum": 150.12597169655754
+  }
+}

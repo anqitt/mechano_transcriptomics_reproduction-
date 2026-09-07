@@ -54,3 +54,11 @@ results/intermediate/
 !figures/**
 !results/final/
 !results/final/**
+
+# Keep the compact, curated outputs from the official synthetic tutorial
+!outputs/
+outputs/*
+!outputs/stage3_synthetic/
+!outputs/stage3_synthetic/*.png
+!outputs/stage3_synthetic/*.csv
+!outputs/stage3_synthetic/run_summary.json
