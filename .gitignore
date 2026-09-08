@@ -62,3 +62,8 @@ outputs/*
 !outputs/stage3_synthetic/*.png
 !outputs/stage3_synthetic/*.csv
 !outputs/stage3_synthetic/run_summary.json
+
+# Keep only the compact Step 4B inspection figures; real data remain under data/
+!outputs/stage4b_real_data/
+outputs/stage4b_real_data/*
+!outputs/stage4b_real_data/*.png
