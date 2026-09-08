@@ -1,0 +1,44 @@
+{
+  "diagnostics": {
+    "dataset1": {
+      "input_cells": 1163,
+      "non_other_cells": 1077,
+      "other_cells_excluded": 86,
+      "boundary_cells": 128,
+      "unreachable_cells": 9,
+      "tissues_in_official_order": [
+        "Forebrain/Midbrain/Hindbrain",
+        "Neural Crest"
+      ]
+    },
+    "dataset2": {
+      "input_cells": 912,
+      "non_other_cells": 856,
+      "other_cells_excluded": 56,
+      "boundary_cells": 43,
+      "unreachable_cells": 0,
+      "tissues_in_official_order": [
+        "Cranial mesoderm",
+        "Forebrain/Midbrain/Hindbrain"
+      ]
+    },
+    "dataset3": {
+      "input_cells": 917,
+      "non_other_cells": 550,
+      "other_cells_excluded": 367,
+      "boundary_cells": 26,
+      "unreachable_cells": 0,
+      "tissues_in_official_order": [
+        "Hindbrain",
+        "Midbrain"
+      ]
+    }
+  },
+  "sanity_checks": {
+    "duplicate_undirected_junctions": 0,
+    "self_junctions": 0,
+    "missing_tissue_annotations": 0,
+    "invalid_tension_values": 0,
+    "mixed_dataset_ids": 0
+  }
+}

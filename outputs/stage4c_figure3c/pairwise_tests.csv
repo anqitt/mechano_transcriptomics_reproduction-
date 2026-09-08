@@ -1,0 +1,7 @@
+dataset,homotypic_group,heterotypic_group,homotypic_n,heterotypic_n,homotypic_mean,heterotypic_mean,percent_homotypic_lower_than_heterotypic,mannwhitney_u,p_value_one_sided_less
+dataset1,Forebrain/Midbrain/Hindbrain_awayfrom_boundary,heterotypic,1106,151,146.00184846173872,168.86336138282473,13.538468459867628,73399.0,0.00787493712506452
+dataset1,Neural Crest_awayfrom_boundary,heterotypic,505,151,158.83102808220798,168.86336138282473,5.941095343869636,34806.0,0.052045693025615826
+dataset2,Cranial mesoderm_awayfrom_boundary,heterotypic,99,51,151.87188913179236,182.302609157991,16.692421554880823,2056.0,0.03167583450446061
+dataset2,Forebrain/Midbrain/Hindbrain_awayfrom_boundary,heterotypic,756,51,148.59469200042486,182.302609157991,18.490090357595186,15720.0,0.013624830886943474
+dataset3,Hindbrain_awayfrom_boundary,heterotypic,272,29,160.63481122183876,199.0788551769204,19.310962945269406,2823.0,0.0059538120334940055
+dataset3,Midbrain_awayfrom_boundary,heterotypic,222,29,140.01954033951364,199.0788551769204,29.666292175992794,2019.0,0.0005526891564734594

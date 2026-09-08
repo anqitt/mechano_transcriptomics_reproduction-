@@ -67,3 +67,10 @@ outputs/*
 !outputs/stage4b_real_data/
 outputs/stage4b_real_data/*
 !outputs/stage4b_real_data/*.png
+
+# Keep compact derived tables and figures for the Figure 3c reproduction
+!outputs/stage4c_figure3c/
+outputs/stage4c_figure3c/*
+!outputs/stage4c_figure3c/*.png
+!outputs/stage4c_figure3c/*.csv
+!outputs/stage4c_figure3c/run_summary.json
