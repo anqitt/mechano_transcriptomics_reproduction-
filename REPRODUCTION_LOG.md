@@ -185,3 +185,29 @@ This file is the cumulative experimental record for the TensionMap reproduction.
 - **Compatibility:** the existing environment lacks seaborn, so the published
   violin form was drawn with matplotlib. No environment or scientific method
   was changed; VMSI was not rerun.
+
+## Step 5A — Figures 4–6 roadmap audit
+
+- **Date:** 2026-09-08 (Asia/Shanghai); roadmap inspection only. No Figure
+  4–6 computation, environment change, VMSI run or additional data download.
+- **Figures audited:** Figure 4 directional ligand–receptor signaling at the
+  CM–FMH boundary; Figure 5 gSEM associations of expression with pressure and
+  stress magnitude after spatial residualization; Figure 6 scHOT nonlinear
+  expression–mechanics profiles.
+- **Official code identified:** `notebooks/03_lr_analysis.ipynb` (Figure 4),
+  `notebooks/05_spatial_regression.ipynb` plus `helper_functions.R` (Figure 5),
+  and `notebooks/04_nonlinear_schot.ipynb` (Figure 6). Notebooks
+  `01_biophysical_analysis.ipynb` and `02_sc_analysis.ipynb` provide boundary
+  intermediates and expression/HVG preprocessing.
+- **Dependencies/data:** large `gex_res.csv` matrices; pinned CellChatDB/
+  OmniPath table and boundary intermediates for Figure 4; the authors' R 4.2.1
+  and Bioconductor stack (`mgcv`, `scHOT`, `clusterProfiler`, mouse annotation,
+  parallel/plotting packages) for Figures 5–6. The expression files are inside
+  the existing ignored official archive but were not extracted in this step.
+- **Recommended order:** prioritize Figure 5, then Figure 4, then Figure 6.
+  Figure 5 most directly tests integrated spatial transcriptomics–mechanics
+  associations with an explicit spatial-confounding control; Figure 4 is a
+  lighter boundary-specific mechanism analysis; Figure 6 is the highest-cost
+  nonlinear extension.
+- **Roadmap:** `FIGURE4_6_ROADMAP.md` records inputs, methods, claims,
+  limitations, dependencies, risks and the beginner-oriented storyline.
