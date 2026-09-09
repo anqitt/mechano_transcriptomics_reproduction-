@@ -211,3 +211,46 @@ This file is the cumulative experimental record for the TensionMap reproduction.
   nonlinear extension.
 - **Roadmap:** `FIGURE4_6_ROADMAP.md` records inputs, methods, claims,
   limitations, dependencies, risks and the beginner-oriented storyline.
+
+## Step 5B — Figure 5 feasibility audit
+
+- **Date:** 2026-09-09 (Asia/Shanghai); data, code and dependency audit only.
+  No gSEM model was fitted, no package was installed and no new dataset was
+  downloaded or extracted.
+- **Panels traced:** Figure 5a–e use dataset 2. Panels a/c show spatially
+  adjusted pressure/stress-magnitude gene associations, b/d show GO results,
+  and e maps selected pressure-associated genes. The pinned public notebook
+  lacks the exact sign-separated publication GO code and panel 5e plotting
+  cell.
+- **Required data:** dataset-2 `gex_res.csv` (29,452 genes × 912 cells) and
+  `tensionmap_res.csv` (912 cells × 25 columns). Both are local: the expression
+  matrix remains inside the ignored official archive and the mechanics table
+  is already extracted. No additional biological download is required.
+- **Identifier alignment:** `cell_*` expression columns and mechanics row IDs
+  match exactly: 912 expression, mechanics and coordinate cells; 912 matched;
+  zero unmatched or duplicate IDs. The helper explicitly selects expression
+  columns by mechanics row names, and all 912 cells enter the model.
+- **Preprocessing:** the Figure 5 notebook retains genes nonzero in >50% of
+  cells (12,704 genes for dataset 2), creates stress magnitude as the sum of
+  the two stress eigenvalues, and applies natural log to each mechanics
+  variable. It does not select HVGs, re-normalize/log/scale expression, or
+  filter cells. The checked-in notebook's seeded 100-gene sample is a
+  demonstration, not the publication-scale route.
+- **gSEM:** `mgcv::gam()` fits separate 2D centroid splines to expression and
+  log mechanics (`k=300`, `fx=TRUE`, `REML` in the official call); the model is
+  `lm(expression_spatial_residual ~ mechanics_spatial_residual)`. It returns
+  slope, t statistic and two-sided P value; the combined results receive BH
+  correction.
+- **Dependencies:** system R 4.2.1 matches the authors, but local `mgcv`
+  1.8-40 differs from saved official 1.9-0. `doParallel`, publication plotting,
+  `clusterProfiler`, `org.Mm.eg.db` and related packages are missing. The
+  minimal Conda environment lacks the full Jupyter/Scanpy stack; Scanpy is not
+  required for the processed-data core Figure 5 model.
+- **Minimal feasibility:** **PARTIAL** on this 4-core Intel MacBook Pro with
+  8 GB RAM. Data are sufficient, but dependencies require a separate audited
+  environment. A full 12,704-gene, two-metric run is estimated at 6–12 hours
+  and 4–8 GB or more with parallel overhead; a small deterministic benchmark
+  should precede it.
+- **Documentation:** `FIGURE5_FEASIBILITY.md` records the panel map, exact data
+  flow, preprocessing, cell-ID audit, model formulas, dependency versions,
+  risks and recommended Step 5C smoke-test scope.
