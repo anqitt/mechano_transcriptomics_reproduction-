@@ -74,3 +74,9 @@ outputs/stage4c_figure3c/*
 !outputs/stage4c_figure3c/*.png
 !outputs/stage4c_figure3c/*.csv
 !outputs/stage4c_figure3c/run_summary.json
+
+# Keep compact deterministic Figure 5 benchmark tables; full matrices stay under data/
+!outputs/stage5c_figure5_benchmark/
+outputs/stage5c_figure5_benchmark/*
+!outputs/stage5c_figure5_benchmark/*.csv
+!outputs/stage5c_figure5_benchmark/session_info.txt

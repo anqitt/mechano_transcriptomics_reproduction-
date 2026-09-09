@@ -1,0 +1,4 @@
+"genes","successful","failed","runtime_seconds","seconds_per_gene","projected_seconds_12704","master_rss_before_mb","master_rss_after_mb","r_heap_max_used_mb","error"
+10,10,0,66.893,6.6893,84980.8672,NA,NA,166.703681945801,""
+50,50,0,404.789,8.09578,102848.78912,NA,NA,161.059761047363,""
+100,100,0,710.556,7.10556,90269.03424,NA,NA,163.509483337402,""

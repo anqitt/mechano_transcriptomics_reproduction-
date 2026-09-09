@@ -254,3 +254,38 @@ This file is the cumulative experimental record for the TensionMap reproduction.
 - **Documentation:** `FIGURE5_FEASIBILITY.md` records the panel map, exact data
   flow, preprocessing, cell-ID audit, model formulas, dependency versions,
   risks and recommended Step 5C smoke-test scope.
+
+## Step 5C — Figure 5 environment and deterministic gSEM benchmark
+
+- **Date:** 2026-09-09 (Asia/Shanghai). This was a small computational
+  benchmark only; the full 12,704-gene analysis, Figure 5 panels and GO
+  enrichment were not run.
+- **Environment:** `.conda/figure5-gsem-repro`; Intel macOS x86_64; Python
+  3.9.12; R 4.2.1; mgcv 1.9-0, nlme 3.1-163, foreach 1.5.2,
+  doParallel 1.0.17 and iterators 1.0.14. The old Conda 4.12 metadata solve
+  stalled, so verified official micromamba 2.9.0 was used as the solver.
+- **Data audit:** official dataset 2; 912 expression, 912 mechanics and 912
+  identically ordered matched cells; 29,452 input genes; exactly 12,704 were
+  nonzero in >50% of cells. A streaming standard-library Python script kept
+  the deterministic first 100 filtered rows without changing values.
+- **Official method:** pinned `helper_functions.R` at upstream commit
+  `1a3ed8e940059d9e3574f21b67f340917f1bf049`; `k=300`, `fx=TRUE`, REML,
+  spatial GAM residualization and residual linear association. Two workers.
+- **One gene:** `Mrpl15` against pressure, 912 cells; beta -0.0171985,
+  t -2.71454, P 0.00676231; runtime 31.197 s; success.
+- **Benchmarks:** 10/50/100 genes all succeeded with zero failures in
+  66.893/404.789/710.556 s. Outputs contained both mechanics metrics and
+  finite beta, t, P, BH-adjusted P and sign fields.
+- **Projection:** from the 100-gene run, about 12.54 h per metric and 25.08 h
+  for both across 12,704 genes. Subset R heap maximum was approximately
+  164–167 MB; full two-worker memory is estimated at 1–3 GB, with 2–4 GB free
+  recommended because direct worker peak RSS was unavailable.
+- **Warnings/deviations:** exact scientific package versions were installed,
+  but conda-forge binaries report build under R 4.2.3 while running under R
+  4.2.1. All benchmark fits passed, so expected scientific impact is
+  negligible. The package solver and low-memory CSV preparation differ from
+  the notebook's execution mechanics, not its statistical logic.
+- **Files:** `figure5-gsem-environment.yml`,
+  `prepare_figure5_benchmark_data.py`, `benchmark_figure5_gsem.R`, pinned
+  `TensionMap/notebooks/helper_functions.R`, `FIGURE5_BENCHMARK.md`, and small
+  tables/session record under `outputs/stage5c_figure5_benchmark/`.

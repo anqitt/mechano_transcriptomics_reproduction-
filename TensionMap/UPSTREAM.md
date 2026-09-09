@@ -24,10 +24,14 @@ are included at this stage:
 - `notebooks/tensionmap_example.ipynb` (added unchanged from the pinned commit
   for source verification and comparison with its saved synthetic outputs only;
   it is not executed as part of the vendored snapshot)
+- `notebooks/helper_functions.R` (added from the pinned commit as the official
+  Figure 5 gSEM implementation used by the deterministic benchmark; its logic
+  is unmodified, with only a final newline added locally)
 
 The files were downloaded from commit-specific `raw.githubusercontent.com` URLs.
 The full paper dataset and full transcriptomics environment are deliberately not
-included.
+included. The later addition of `helper_functions.R` supports only the small
+Figure 5 environment benchmark and does not include transcriptomics data.
 
 ## Why this is a vendored snapshot
 

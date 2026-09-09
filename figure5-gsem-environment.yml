@@ -1,0 +1,12 @@
+name: figure5-gsem-repro
+channels:
+  - conda-forge
+dependencies:
+  # Matches the authors' saved Figure 5 session where possible.
+  - python=3.9.12
+  - r-base=4.2.1
+  - r-mgcv=1.9_0
+  - r-nlme=3.1_163
+  - r-foreach=1.5.2
+  - r-doparallel=1.0.17
+  - r-iterators=1.0.14
